@@ -66,3 +66,4 @@ MemoryCaptures
 # Imported
 !*.gitkeep
 Assets/Obi/*
+Assets/TextMesh Pro/*
