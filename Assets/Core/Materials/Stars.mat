@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Liquid
-  m_Shader: {fileID: 4800000, guid: 6ac3bd9684dd7db4bb9122c08348ea89, type: 3}
+  m_Name: Stars
+  m_Shader: {fileID: 4800000, guid: 2d04a185e7eb90dd5bb726a61aae593c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -60,30 +60,22 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FillAmount: 0.84
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
+    - _Mult1: 100
+    - _Mult2: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rim: 0.002
-    - _RimPower: 0
-    - _SizeY: 0
+    - _Scale: 0.1
+    - _Size: 0.7
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WobbleX: 0
-    - _WobbleZ: 0
     - _ZWrite: 1
     m_Colors:
-    - _Bounds: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _LiquidColor: {r: 0.5392488, g: 0.626127, b: 0.6886792, a: 0.16470589}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0, g: 0.5794997, b: 1, a: 0.7529412}
-    - _TopColor: {r: 0, g: 0.38875306, b: 0.6698113, a: 0.7529412}

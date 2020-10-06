@@ -3,7 +3,9 @@ using UnityHelpers;
 
 public class GyroRotator : MonoBehaviour
 {
-    public Rigidbody target;
+    //public Rigidbody target;
+    private PhysicsTransform target { get { if (_target == null) { _target = GetComponent<PhysicsTransform>(); } return _target; } }
+    private PhysicsTransform _target;
     private Quaternion previousRotation = Quaternion.identity;
     public Transform gyroVisualizer;
     private Quaternion deltaRotation = Quaternion.Euler(90, 0, 0);
@@ -11,21 +13,24 @@ public class GyroRotator : MonoBehaviour
     private void Start()
     {
         Input.gyro.enabled = true;
+        StartCoroutine(ResetInTheBeginning());
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        Quaternion currentRotation = deltaRotation * GyroToUnity(Input.gyro.attitude);
+        Quaternion currentRotation = deltaRotation * Input.gyro.attitude.AdjustAttitude();
         Quaternion changeInRotation = Quaternion.Inverse(previousRotation) * currentRotation;
         previousRotation = currentRotation;
         
-        target.MoveRotation(target.rotation * changeInRotation);
-        gyroVisualizer.localRotation = target.rotation;
+        Quaternion nextRotation = target.rotation * changeInRotation;
+        target.rotation = nextRotation;
+        if (gyroVisualizer != null)
+            gyroVisualizer.localRotation = transform.rotation;
     }
-
-    //Source: https://gamedev.stackexchange.com/questions/174107/unity-gyroscope-orientation-attitude-wrong
-    private static Quaternion GyroToUnity(Quaternion q)
+    private System.Collections.IEnumerator ResetInTheBeginning()
     {
-        return new Quaternion(q.x, q.y, -q.z, -q.w);
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+        ResetRotation();
     }
 
     public void ResetRotation()
