@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8669696d8cbcd308b78793812df05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractionConstant: 0.01
+  attractionConstant: 0.004
   distPower: 0.5
 --- !u!1 &8371848613151700250
 GameObject:

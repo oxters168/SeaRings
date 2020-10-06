@@ -33,4 +33,10 @@ public class Sprayer : MonoBehaviour
             ring.AddForceAtPosition(forceAppliedToRing, ringForcePos, ForceMode.Force);
         }
     }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawWireCube(center, size);
+    }
 }
