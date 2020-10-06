@@ -99,6 +99,7 @@ public class ContainerCreator : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireCube(Vector3.zero, size);
     }
 }

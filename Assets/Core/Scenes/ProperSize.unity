@@ -3548,7 +3548,6 @@ GameObject:
   - component: {fileID: 1943669789}
   - component: {fileID: 1943669788}
   - component: {fileID: 1943669786}
-  - component: {fileID: 1943669790}
   m_Layer: 0
   m_Name: Container
   m_TagString: Untagged
@@ -3668,21 +3667,6 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   velStrength: 1
   velMaxForce: 500
---- !u!114 &1943669790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943669785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5053ab5beaa85fd94965783f7c6bb4f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  looker: {fileID: 604949730}
-  child: {fileID: 174442283}
-  multiplier: 1.14
 --- !u!114 &1943669791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3717,7 +3701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57c66a0083bfc1ebab01fdb2445b120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0.1
+  child: {fileID: 174442283}
+  distance: 0.16
   fitTo: {fileID: 604949730}
 --- !u!1 &1945988098
 GameObject:
