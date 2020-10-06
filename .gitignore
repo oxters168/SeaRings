@@ -66,3 +66,6 @@ MemoryCaptures
 # Imported
 Assets/TextMesh Pro/*
 !Assets/TextMesh Pro/.gitkeep
+
+Assets/Rewired/*
+!Assets/Rewired/.gitkeep
